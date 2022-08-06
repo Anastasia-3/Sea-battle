@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My first project</title>
+    <link href="index2.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<h1>My project</h1>
+<h1 class="main-text">My first project</h1>
+<h1 class="words">My first project</h1>
+<hr color="blue" size="7">
+<p>
+    <!--<form action="index.html">-->
+<form>
+    <b>My name:</b><br>
+    <input type="text" size="40">
+    <br>
+    <b>My email:</b><br>
+    <input type="email" size="40"><br>
+    <b>Password:</b><br>
+    <input type="password" size="40"><br>
+    <b>Date:</b><br>
+    <input type="date" size="50"><br><br>
+    <input type="reset"><br>
+    <b><input type="submit" onclick="onAlert()"></b>
+    <!--    <b><input type="submit"></b>-->
+</form>
+</p>
+
+<br/>
+<p>Для искусственного освещения помещения применяются люминесцентные лампы.
+    Они отличаются высокой световой отдачей, продолжительным сроком службы,
+    малой яркостью светящейся поверхности, близким к естественному спектральным
+    составом излучаемого света, что обеспечивает хорошую цветопередачу. Классы применяют,
+    когда необходимо определить стиль для индивидуального элемента веб-страницы или задать
+    разные стили для одного тега. При использовании совместно с тегами синтаксис для классов будет следующий.</p>
+<p class="cite">Для исключения засветки экрана дисплея световыми потоками
+    оконные проемы снабжены светорассеивающими шторами.</p>
+<p class="words">К любому тегу одновременно можно добавить несколько классов, перечисляя их в атрибуте class через
+    пробел.
+    В этом случае к элементу применяется стиль, описанный в правилах для каждого класса. Поскольку при добавлении
+    нескольких
+    классов они могут содержать одинаковые стилевые свойства, но с разными значениями, то берётся значение у класса,
+    который описан в коде ниже.
+    В примере 8.4 показано использование разных классов для создания облака тегов.</p>
+<br/>
+<br/>
+<br/>
+<center><img src="https://pic.uguide.ru/cover/articles/kak-sozdat-prostoj-html-sajt-v-bloknote-2.jpg" alt="Loading..."
+             border="10" border style="color:yellow">
+</center>
+<p><img src="html photo2.jpg" alt="Loading..."></p>
+
+</form>
+
+</body>
+<script>
+
+    let max = 0;
+
+
+    for (let i = 1; i < 51; i++) {
+        const rx = Math.floor(Math.random ()*1001);
+        if (max < rx) {
+            max = rx;
+        }
+        console.log('Текущее значение rx=', rx);
+
+
+
+    }
+
+    console.log(max, 'Maximum random number');
+
+
+</script>
+</html>
