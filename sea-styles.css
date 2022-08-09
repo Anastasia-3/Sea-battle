@@ -1,0 +1,28 @@
+#table {
+    width: 700px;
+    height: 700px;
+    text-align: center;
+    border: 3px blueviolet solid;
+    background-color: seagreen;
+    font-family: "Lucida Calligraphy" ;
+}
+#tableLetter {
+    width: 700px;
+    height: 700px;
+    text-align: center;
+    border: 3px blueviolet solid;
+    background-color: chartreuse;
+    font-family: "Lucida Handwriting";
+}
+#battle {
+    width: 700px;
+    height: 700px;
+    text-align: center;
+    border: 3px rebeccapurple;
+    background-color: mediumpurple;
+    font-family: "Lucida Handwriting";
+}
+
+tr, td {
+    border: 3px blueviolet solid;
+}
