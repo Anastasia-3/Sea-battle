@@ -1,15 +1,3 @@
-// function getArray() {
-//     let arr = document.getElementById('table');
-//     let array = [];
-//     for (let i = 0; i < 10; i++) {
-//         array[i] = [];
-//         for (let y = 0; y < 10; y++) {
-//             let randomNumber = Math.floor(Math.random() * 100);
-//             array[i].push(randomNumber);
-//         }
-//     }
-//    arr.innerHTML = array;
-// }
 let table = document.getElementById('table');
 let tableArr = [];
 for (let i = 0; i < 10; i++) {
@@ -24,4 +12,4 @@ for (let i = 0; i < 10; i++) {
     }
     table.appendChild(tr);
 }
-
+alert(100 === '100');
