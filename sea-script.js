@@ -20,7 +20,35 @@ function showTable() {
 }
 showTable();
 
+function change(array) {
+    array[0] = 5;
+}
+
+function changeFull(array){
+    array = [9, 8, 7];
+}
+ let numbers = [1, 2, 3];
+
+change(numbers);
+console.log(numbers);
+changeFull(numbers);
+console.log(numbers);
 
 
+
+ function createUser(name, age){
+     return{
+         name: name,
+         age: age,
+     }
+ }
+
+
+ function getUserInfo() {
+     let userName = document.getElementById('name').value;
+     let userAge = document.getElementById('age').value;
+     let user = createUser(userName, userAge);
+     alert(`user name is ${user.name} and user age is ${user.age}`);
+ }
 
 
