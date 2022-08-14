@@ -1,15 +1,26 @@
-let table = document.getElementById('table');
-let tableArr = [];
-for (let i = 0; i < 10; i++) {
-    tableArr[i] = [];
-    let tr = document.createElement('tr');
-    for (let j = 0; j < 10; j++){
-        let td = document.createElement('td');
-        let randomNumber = Math.floor(Math.random() * 100);
-        td.innerHTML = randomNumber;
-        // tableArr[i].push(randomNumber);
-        tr.appendChild(td);
-    }
-    table.appendChild(tr);
+function getRandomString(){
+    let string = 'AB';
+    let randomStr = Math.floor(Math.random()* string.length);
+    let randomLetter = string[randomStr];
+    return randomLetter;
 }
-alert(100 === '100');
+function showTable() {
+    let tableLetter = document.getElementById('tableLetter');
+    let letterArr = [];
+    for (let i = 0; i < 10; i++) {
+        letterArr[i] = [];
+        let tr = document.createElement('tr');
+        for (let j = 0; j < 10; j++) {
+            let td = document.createElement('td');
+            td.innerHTML = getRandomString();
+            tr.appendChild(td);
+        }
+        tableLetter.appendChild(tr);
+    }
+}
+showTable();
+
+
+
+
+
