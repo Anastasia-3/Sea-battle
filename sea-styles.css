@@ -1,28 +1,29 @@
-#table {
-    width: 700px;
-    height: 700px;
-    text-align: center;
-    border: 3px blueviolet solid;
-    background-color: seagreen;
-    font-family: "Lucida Calligraphy" ;
-}
+
 #tableLetter {
     width: 700px;
     height: 700px;
     text-align: center;
     border: 3px blueviolet solid;
-    background-color: chartreuse;
+    background-color: bisque;
     font-family: "Lucida Handwriting";
-}
-#battle {
-    width: 700px;
-    height: 700px;
-    text-align: center;
-    border: 3px rebeccapurple;
-    background-color: mediumpurple;
-    font-family: "Lucida Handwriting";
+    border-collapse: collapse;
 }
 
+#table {
+    border: 3px fuchsia solid;
+    border-collapse: collapse;
+}
 tr, td {
     border: 3px blueviolet solid;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-family: "Comic Sans MS";
+}
+.result {
+    background-color: red;
+}
+
+.grey {
+    background-color: grey;
 }

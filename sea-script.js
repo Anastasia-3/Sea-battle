@@ -1,66 +1,109 @@
-function getRandomNumber(){
-    let randomNumber = Math.floor(Math.random()*100);
-    return randomNumber;
-}
+// function createBattleStatus() {
+//     const string = 'XO. ';
+//     const randomStr = Math.random();
+//     if (randomStr < 0.1) { return string[0];}
+//     if (randomStr < 0.3) {return string[1];}
+//     if (randomStr < 0.6) {return string[2];}
+//     return string[3];
+// }
+//
+// function getBattleStatus() {
+//         return createBattleStatus();
+//     }
+//
 
-
-let table = document.getElementById('table');
-function tableFromArr() {
-    let tableArr = [];
-    for (let i = 0; i < 10; i++) {
-        tableArr[i] = [];
-        let tr = document.createElement('tr');
-        for (let j = 0; j < 10; j++) {
-            let td = document.createElement('td');
-            td.innerHTML = getRandomNumber();
-            tr.appendChild(td);
+function createArray(numberOfLines, numberOfColumns) {
+    const resultArray = [];
+    for (let i = 0; i < numberOfLines; i++) {
+        resultArray[i] = [];
+        for (let j = 0; j < numberOfColumns; j++) {
+            const value = Math.floor(Math.random()*2);
+            resultArray[i].push(value);
         }
-        table.appendChild(tr);
     }
+    return resultArray;
 }
-tableFromArr();
+console.log(createArray(10, 10));
 
+// function showBattleField(field) {
+//     const arrayTable = document.getElementById('table');
+//     for (let i = 0; i < 10; i++) {
+//         const tr = document.createElement('tr');
+//         for (let j = 0; j < 10; j++) {
+//             const td = document.createElement('td');
+//             td.innerHTML = field[i][j];
+//             if (field[i][j] === 0) {
+//                 td.className = 'grey';
+//                 // document.write(td.className);
+//                 // td.innerHTML = td.className;
+//             }
+//             tr.appendChild(td);
+//         }
+//         arrayTable.appendChild(tr);
+//     }
+//     return arrayTable;
+// }
+//
+// showBattleField(createArray(10, 10));
 
-function getRandomString(){
-    let string = 'AB';
-    let randomStr = Math.floor(Math.random()* string.length);
-    let randomLetter = string[randomStr];
-    return randomLetter;
-}
-function showTable() {
-    let tableLetter = document.getElementById('tableLetter');
-    let letterArr = [];
-    for (let i = 0; i < 10; i++) {
-        letterArr[i] = [];
-        let tr = document.createElement('tr');
-        for (let j = 0; j < 10; j++) {
-            let td = document.createElement('td');
-            td.innerHTML = getRandomString();
-            tr.appendChild(td);
-        }
-        tableLetter.appendChild(tr);
-    }
-}
-showTable();
-
-
-let seaBattle = document.getElementById('battle');
-function sBattle() {
-    let battle = [];
-    for (let i = 0; i < 10; i++) {
-        battle[i] = [];
-        let tr = document.createElement('tr');
-        for (let k = 0; k < 10; k++) {
-            let td = document.createElement('td');
-            td.innerHTML = ' ';
-            tr.appendChild(td);
-            if (k % i === 0) {
-              td.innerHTML = 'X';
+function showBattleField(field) {
+    const arrayTable = document.getElementById('table');
+    field.forEach(function(row) {
+        const tr = document.createElement('tr');
+        field.forEach(function(cell) {
+            const td = document.createElement('td');
+            td.innerHTML = cell;
+            if (cell === 0) {
+                td.className = 'grey';
+                document.write(td.className);
+                // td.innerHTML = td.className;
             }
-        }
-        seaBattle.appendChild(tr);
-    }
+            tr.appendChild(td);
+        })
+        arrayTable.appendChild(tr);
+    })
+    return arrayTable;
 }
-sBattle();
+
+showBattleField(createArray(10, 10));
+
+// function showTable(lineNumber, cellNumber, shipMarkup) {
+//     const tableLetter = document.getElementById('tableLetter');
+//     for (let i = 0; i < 10; i++) {
+//         const tr = document.createElement('tr');
+//         for (let j = 0; j < 10; j++) {
+//             const td = document.createElement('td');
+//             // if (document.getElementById('ship').value === 1) {
+//                 if (i === lineNumber && j === cellNumber) {td.innerHTML = shipMarkup;}
+//                 else {td.innerHTML = ' ';}
+//             tr.appendChild(td);
+//         }
+//         tableLetter.appendChild(tr);
+//     }
+// }
+// showTable(0, 3, '***');
 
 
+
+function fib(n) {
+    if( n < -1 || n === -1){return fib( n + 2 ) - fib( n + 1 )};
+        if (n === 0) { return 0;}
+    if (n === 1 || n === 2) { return 1;}
+    return fib(n-1) + fib(n-2);
+}
+alert(fib(-2));
+
+// function sumTo(num) {
+//     if (num === 0 || num === 1) { return num;}
+//     return num + sumTo(num - 1);
+// }
+// alert(sumTo(-2));
+
+// function sumNumber(num) {
+//     let result = 0;
+//     for (let i = 0; i < num + 1; i++) {
+//        result += i;
+//     }
+//     return result;
+// }
+// alert(sumNumber(-2));
