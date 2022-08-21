@@ -1,13 +1,3 @@
-#tableLetter {
-    width: 700px;
-    height: 700px;
-    text-align: center;
-    border: 3px blueviolet solid;
-    background-color: bisque;
-    font-family: "Lucida Handwriting";
-    border-collapse: collapse;
-}
-
 #table {
     border: 3px fuchsia solid;
     border-collapse: collapse;
@@ -25,4 +15,7 @@ tr, td {
 
 .grey {
     background-color: grey;
+}
+.creatingShip{
+    padding: 10px;
 }
