@@ -19,3 +19,8 @@ tr, td {
 .creatingShip{
     padding: 10px;
 }
+
+img {
+    width: 70px;
+    height: 70px;
+}
